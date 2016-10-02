@@ -1,11 +1,13 @@
 'use strict';
 
 const Snowflake = require('./App');
+const $ = require('jquery');
 
 var snowflake = new Snowflake({
-  radius: 10
+  radius: 5
 });
 
 snowflake
 .generate()
-.render();
+.render($('#root canvas'));
+
